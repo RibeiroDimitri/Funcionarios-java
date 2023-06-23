@@ -40,7 +40,14 @@ public class Funcionario {
 		this.salario = salario;
 	}
 
-	public double getBonificacao() {
+	public double getBonificacaoMensal() {
 		return salario * 0.10;
 	}
+	public double getBonificacaoAnual() {
+		return salario + salario; 
+	}
+	public double totalMensal() {
+		return salario + getBonificacaoMensal();
+	}
+	
 }

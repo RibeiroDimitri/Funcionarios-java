@@ -5,8 +5,7 @@ public class Gerente extends Funcionario {
 	private int senha;
 	private int numeroDeFuncionariosGerenciados;
 
-	public Gerente(String nome, String cpf, double salario) {
-		super(nome, cpf, salario);
+	public Gerente() {
 	}
 
 	public Gerente(String nome, String cpf, double salario, int senha, int numeroDeFuncionariosGerenciados) {
@@ -41,8 +40,11 @@ public class Gerente extends Funcionario {
 		}
 	}
 	@Override
-	public double getBonificacao() {
-		return salario * 0.10;
+	public double getBonificacaoMensal() {
+		return salario * 0.15;
 	}
-
+	@Override
+	public double getBonificacaoAnual() {
+		return super.getBonificacaoAnual() + 1000;
+	}
 }
